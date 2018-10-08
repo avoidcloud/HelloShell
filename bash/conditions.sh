@@ -60,7 +60,7 @@ fi
 #::::::::::::::::::::::::::::::::::::::
 
 # string comparison
-name = 'hello world'
+name='hello world'
 
 if [[ name == string ]]; then
 	echo 'strings are equal'
