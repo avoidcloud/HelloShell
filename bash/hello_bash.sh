@@ -43,6 +43,12 @@ read -sp 'password: ' my_pass
 echo #for next line after taking silent input
 echo "Your Password: $my_pass"
 
+# input from same line
+echo -e 'enter user name: \c'
+read user 
+echo "Hello $user"
+
+# read array
 read an array : index start from 0
 echo 'Age and Birth Year'
 read -a data
