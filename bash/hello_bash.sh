@@ -56,4 +56,6 @@ echo "Age: ${data[0]} and Birth Year: ${data[1]}"
 
 # read without any variable: syatem variable REPLY will store that 
 read 
-echo $REPLY
+echo $REPLYhello world
+file
+heee

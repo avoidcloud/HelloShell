@@ -59,15 +59,27 @@ if [ -f $file_name ]
 	fi
 fi
 
+#::::::::::::::::::::::::::::::::::::::::::::::
 # -r tag check file is readable or not
 # -w tag check file is writable or not
 # -x tag check file is executable or not
+#::::::::::::::::::::::::::::::::::::::::::::::
+
+# define a file name
+test_file='test_file.txt'
+# create a new file using touch command
+touch $test_file
+# check whether writable or not
+if [ -w $test_file ]
+	then 
+	echo 'type something in your file: ctrl+d for exit'
+	# append new string from console
+	cat >> $test_file #concate
+fi
+
+# check reac permission
 if [ -r $file_name ]
-	then echo "$file_name is readable"
-fi
-if [ -w $file_name ]
-	then echo "$file_name is writable"
-fi
-if [ -x $file_name ]
-	then echo "$file_name is executable"
+	then
+	# display the text file using tail command
+	tail $test_file
 fi

@@ -67,3 +67,45 @@ if [[ name == string ]]; then
 else
 	echo "strings are not equal"
 fi
+
+#:::::::::::::::::::: AND OR ::::::::::::::::
+
+############ AND ##################
+# [ condition1 ] && [ condition2 ]
+# [[ condition1 && condition2 ]]
+# [ condition1 -a condition2 ]
+
+start=14
+stop=21
+now=16
+
+if [ $now -ge $start ] && [ $now -le $stop ]
+	then echo 'Valid AND with syntax: 1'
+fi
+
+if [[ $now -ge $start && $now -le $stop ]]
+	then echo 'Valid AND with syntax: 2'
+fi
+
+if [ $now -ge $start -a $now -le $stop ]
+	then echo 'Valid AND with syntax: 3'
+fi
+
+
+############# OR ########################
+# [ condition1 ] || [ condition2 ]
+# [[ condition1 || condition2 ]]
+# [ condition1 -o condition2 ]
+
+
+if [ $now -eq $start -o $now -gt $start ]
+	then echo 'Valid OR with syntax: 1'
+fi
+
+if [[ $now -eq $start || $now -gt $start ]]
+	then echo 'Valid OR with syntax: 2'
+fi
+
+if [ $now -eq $start ] || [ $now -gt $start ]
+	then echo 'Valid OR with syntax: 3'
+fi
